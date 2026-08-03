@@ -133,10 +133,10 @@ const closeSplash = () => {
 };
 
 window.addEventListener("load", () => {
-    window.setTimeout(closeSplash, 4300);
+    window.setTimeout(closeSplash, 3000);
 });
 
-window.setTimeout(closeSplash, 6000);
+window.setTimeout(closeSplash, 4500);
 
 const scrollToSection = (name) => {
     const target = document.querySelector(`[data-section="${name}"]`);
