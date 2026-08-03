@@ -1,0 +1,42 @@
+NEWCASTLE TEAM — MODO DT
+========================
+
+CÓDIGO DE ACCESO
+----------------
+Dysta: NCT2026
+Valdo: NCT2026
+
+CÓMO ENTRAR
+-----------
+1. Abre la página.
+2. Presiona “Entrar como DT” o el botón “Editar” del plantel.
+3. Selecciona Dysta o Valdo.
+4. Escribe NCT2026.
+5. Presiona “Entrar”.
+
+QUÉ PUEDE HACER EL DT
+---------------------
+• PLANTELES: agregar o quitar jugadores.
+• FECHAS: agregar jornadas, fecha, hora, rival/detalle y estado.
+• COMPETENCIAS: crear o eliminar competencias.
+
+DÓNDE SE ENCUENTRA EL CÓDIGO
+----------------------------
+Abre app.js y busca:
+
+const dtCodes = Object.freeze({
+    Dysta: "NCT2026",
+    Valdo: "NCT2026"
+});
+
+Para cambiarlo, sustituye NCT2026 por el código que quieras en ambos campos.
+
+IMPORTANTE
+----------
+Los datos se guardan mediante localStorage. Eso significa que solamente quedan
+actualizados en el navegador y dispositivo donde se hicieron los cambios.
+
+El código del DT está dentro del JavaScript público, así que sirve como acceso
+básico, pero no como seguridad real. Para que varios DT actualicen la misma
+información y todos los visitantes la vean, hace falta una base de datos y un
+inicio de sesión validado desde un servidor.
