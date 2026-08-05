@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fechas, planteles y alineaciones de Newcastle Team.">
+    <meta name="theme-color" content="rgb(5, 8, 12)">
+    <title>Newcastle Team</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="reading-line" aria-hidden="true"><span></span></div>
+
+    <div class="intro" aria-hidden="true">
+        <div class="intro-grid"></div>
+        <div class="intro-panels">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="intro-stage">
+            <div class="intro-logo-wrap">
+                <img class="intro-logo" src="assets/newcastle-crest.png" alt="">
+                <i></i>
+            </div>
+
+            <div class="intro-wordmark">
+                <span>NEWCASTLE</span>
+                <span>TEAM</span>
+                <small>HAXBALL · TEMPORADA 2026</small>
+            </div>
+        </div>
+
+        <div class="intro-footer">
+            <span>NEWCASTLE TEAM</span>
+            <i></i>
+        </div>
+    </div>
+
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <a class="brand" href="#inicio" aria-label="Newcastle Team">
+            <img src="assets/newcastle-crest.png" alt="Escudo de Newcastle Team">
+            <span>
+                <strong>NEWCASTLE TEAM</strong>
+                <small>HAXBALL</small>
+            </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Navegación principal">
+            <button type="button" data-scroll="inicio">Inicio</button>
+            <button type="button" data-scroll="fechas">Fechas</button>
+            <button type="button" data-scroll="alineaciones">Alineaciones</button>
+            <button type="button" data-scroll="simulaciones">Jugadas</button>
+            <button type="button" data-scroll="dt">DT</button>
+        </nav>
+
+        <button class="menu-button" type="button" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <nav class="mobile-menu" aria-label="Navegación móvil">
+        <button type="button" data-scroll="inicio">Inicio</button>
+        <button type="button" data-scroll="fechas">Fechas</button>
+        <button type="button" data-scroll="alineaciones">Alineaciones</button>
+        <button type="button" data-scroll="simulaciones">Jugadas</button>
+        <button type="button" data-scroll="dt">DT</button>
+    </nav>
+
+    <main>
+        <section class="hero section-anchor" data-section="inicio">
+            <div class="hero-grid" aria-hidden="true"></div>
+
+            <div class="hero-copy reveal">
+                <span class="eyebrow">NEWCASTLE TEAM · TEMPORADA 2026</span>
+                <h1>Calendario, jugadores y alineaciones.</h1>
+                <p>Aquí puedes revisar las fechas, buscar a cualquier jugador de las capturas y preparar una alineación.</p>
+
+                <div class="hero-actions">
+                    <button class="primary-button" type="button" data-scroll="fechas">VER FECHAS</button>
+                    <button class="secondary-button" type="button" data-scroll="alineaciones">ARMAR ALINEACIÓN</button>
+                </div>
+
+                <div class="hero-stats">
+                    <article>
+                        <small>JUGADORES</small>
+                        <strong data-home-roster-count>13</strong>
+                    </article>
+                    <article>
+                        <small>DT</small>
+                        <strong>2</strong>
+                    </article>
+                    <article>
+                        <small>FORMACIONES</small>
+                        <strong>4</strong>
+                    </article>
+                </div>
+            </div>
+
+            <aside class="hero-card reveal" data-parallax>
+                <div class="hero-card-top">
+                    <span>NEWCASTLE TEAM</span>
+                    <small>INFORMACIÓN DEL CLUB</small>
+                </div>
+
+                <div class="hero-card-crest">
+                    <div class="crest-rings"></div>
+                    <img src="assets/newcastle-crest.png" alt="Escudo de Newcastle Team">
+                </div>
+
+                <div class="hero-card-bottom">
+                    <article>
+                        <small>PRÓXIMA FECHA</small>
+                        <strong data-home-next-date>Por confirmar</strong>
+                    </article>
+                    <article>
+                        <small>PLANTEL</small>
+                        <strong data-home-active-team>Newcastle Team</strong>
+                    </article>
+                </div>
+            </aside>
+        </section>
+
+        <section class="status-strip">
+            <article>
+                <span>01</span>
+                <div>
+                    <small>FECHAS</small>
+                    <strong>Calendario del equipo</strong>
+                </div>
+            </article>
+            <article>
+                <span>02</span>
+                <div>
+                    <small>PLANTEL</small>
+                    <strong>Lista completa de jugadores</strong>
+                </div>
+            </article>
+            <article>
+                <span>03</span>
+                <div>
+                    <small>ALINEACIÓN</small>
+                    <strong>Prepara cada jornada</strong>
+                </div>
+            </article>
+        </section>
+
+        <section class="dates section-anchor" data-section="fechas">
+            <div class="section-heading reveal">
+                <div>
+                    <span>CALENDARIO</span>
+                    <h2>Próximas fechas</h2>
+                </div>
+                <p>Selecciona una competencia para revisar sus fechas. El DT puede agregar o corregir jornadas desde el panel.</p>
+            </div>
+
+            <div class="dates-toolbar reveal">
+                <label>
+                    <span>COMPETENCIA</span>
+                    <select class="calendar-team-select"></select>
+                </label>
+
+                <label>
+                    <span>ESTADO</span>
+                    <select class="calendar-filter-select">
+                        <option value="all">Todas</option>
+                        <option value="confirmed">Confirmadas</option>
+                        <option value="pending">Pendientes</option>
+                        <option value="finished">Finalizadas</option>
+                    </select>
+                </label>
+
+                <button class="dt-access-button" type="button" data-open-dt>ENTRAR COMO DT</button>
+            </div>
+
+            <div class="dates-summary reveal">
+                <article>
+                    <small>PRÓXIMA</small>
+                    <strong data-next-date>Por confirmar</strong>
+                    <span data-next-event>Sin fecha cargada</span>
+                </article>
+                <article>
+                    <small>FECHAS CARGADAS</small>
+                    <strong data-date-count>0</strong>
+                    <span>en esta competencia</span>
+                </article>
+                <article>
+                    <small>CONFIRMADAS</small>
+                    <strong data-confirmed-count>0</strong>
+                    <span>con día asignado</span>
+                </article>
+            </div>
+
+            <div class="date-list" data-date-list></div>
+
+            <div class="empty-state" data-date-empty hidden>
+                <strong>Aún no hay fechas cargadas</strong>
+                <p>El DT puede agregarlas desde el panel de edición.</p>
+            </div>
+        </section>
+
+        <section class="lineups section-anchor" data-section="alineaciones">
+            <div class="section-heading reveal">
+                <div>
+                    <span>ALINEACIONES</span>
+                    <h2>Arma tu equipo</h2>
+                </div>
+                <p>Selecciona una competencia, elige a los jugadores y colócalos en la cancha. Después podrás guardar o descargar la alineación.</p>
+            </div>
+
+            <div class="lineup-controls reveal">
+                <label>
+                    <span>COMPETENCIA</span>
+                    <select class="lineup-team-select"></select>
+                </label>
+
+                <label>
+                    <span>FORMACIÓN</span>
+                    <select class="formation-select">
+                        <option value="4-3-3">4-3-3</option>
+                        <option value="4-4-2">4-4-2</option>
+                        <option value="3-5-2">3-5-2</option>
+                        <option value="5-3-2">5-3-2</option>
+                    </select>
+                </label>
+
+                <label>
+                    <span>NOMBRE</span>
+                    <input class="lineup-name" type="text" maxlength="42" placeholder="Ejemplo: Jornada 1">
+                </label>
+
+                <div>
+                    <button type="button" data-save-lineup>GUARDAR</button>
+                    <button type="button" data-clear-lineup>VACIAR</button>
+                </div>
+            </div>
+
+            <div class="lineup-layout">
+                <aside class="roster reveal">
+                    <div class="panel-title">
+                        <div>
+                            <small>JUGADORES</small>
+                            <strong data-roster-count>0 jugadores</strong>
+                        </div>
+                        <button type="button" data-open-dt>EDITAR</button>
+                    </div>
+
+                    <p class="roster-note">Incluye los fichados y los demás jugadores que aparecieron en las capturas.</p>
+
+                    <label class="search-player">
+                        <span>BUSCAR</span>
+                        <input class="player-search" type="search" placeholder="Nombre del jugador">
+                    </label>
+
+                    <div class="picked-player">
+                        <small>SELECCIONADO</small>
+                        <strong data-picked-player>Ninguno</strong>
+                    </div>
+
+                    <div class="roster-list" data-roster-list></div>
+
+                    <div class="empty-state compact" data-roster-empty hidden>
+                        <strong>Plantel vacío</strong>
+                        <p>El DT todavía no ha cargado jugadores.</p>
+                    </div>
+                </aside>
+
+                <div class="pitch-panel reveal">
+                    <div class="pitch-head">
+                        <div>
+                            <small>CANCHA</small>
+                            <strong data-pitch-title>Newcastle Team · 4-3-3</strong>
+                        </div>
+                        <span>Selecciona un jugador y toca una posición</span>
+                    </div>
+
+                    <div class="pitch">
+                        <div class="pitch-border"></div>
+                        <div class="pitch-half"></div>
+                        <div class="pitch-circle"></div>
+                        <div class="pitch-box top"></div>
+                        <div class="pitch-box bottom"></div>
+                        <div class="pitch-slots" data-pitch-slots></div>
+                    </div>
+                </div>
+
+                <aside class="lineup-actions reveal">
+                    <div class="panel-title">
+                        <div>
+                            <small>ACCIONES</small>
+                            <strong>Tu alineación</strong>
+                        </div>
+                    </div>
+
+                    <button class="action-main" type="button" data-download-lineup>DESCARGAR PNG</button>
+                    <button type="button" data-copy-lineup>COPIAR LISTA</button>
+                    <button type="button" data-load-lineup>CARGAR GUARDADA</button>
+
+                    <div class="help-box">
+                        <strong>Cómo se usa</strong>
+                        <p>Elige un jugador del plantel y después toca una posición de la cancha. Para quitarlo, toca la posición sin tener otro jugador seleccionado.</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+
+        <section class="simulations section-anchor" data-section="simulaciones">
+            <div class="simulation-orbit simulation-orbit-one" aria-hidden="true"></div>
+            <div class="simulation-orbit simulation-orbit-two" aria-hidden="true"></div>
+
+            <div class="section-heading reveal">
+                <div>
+                    <span>JUGADAS</span>
+                    <h2>Simulación de pases</h2>
+                </div>
+                <p>El DT puede preparar una jugada, ordenar a los jugadores y marcar la secuencia de pases. Después cualquier persona puede reproducirla.</p>
+            </div>
+
+            <div class="simulation-toolbar reveal">
+                <label>
+                    <span>JUGADA</span>
+                    <select class="simulation-select"></select>
+                </label>
+
+                <label>
+                    <span>VELOCIDAD</span>
+                    <select class="simulation-speed">
+                        <option value="1">Normal</option>
+                        <option value="0.72">Rápida</option>
+                        <option value="1.35">Lenta</option>
+                    </select>
+                </label>
+
+                <div class="simulation-buttons">
+                    <button class="simulation-play" type="button">REPRODUCIR</button>
+                    <button class="simulation-reset" type="button">REINICIAR</button>
+                    <button type="button" data-open-dt data-open-simulation-editor>EDITAR COMO DT</button>
+                </div>
+            </div>
+
+            <div class="simulation-layout">
+                <div class="simulation-panel reveal">
+                    <div class="simulation-panel-head">
+                        <div>
+                            <small>CANCHA TÁCTICA</small>
+                            <strong data-simulation-title>Salida por derecha</strong>
+                        </div>
+                        <span data-simulation-step>Lista para reproducir</span>
+                    </div>
+
+                    <div class="tactical-pitch" data-simulation-pitch>
+                        <div class="tactical-border"></div>
+                        <div class="tactical-half"></div>
+                        <div class="tactical-circle"></div>
+                        <div class="tactical-box tactical-box-top"></div>
+                        <div class="tactical-box tactical-box-bottom"></div>
+                        <svg class="simulation-lines" viewBox="0 0 100 100" preserveAspectRatio="none" data-simulation-lines></svg>
+                        <div class="simulation-markers" data-simulation-markers></div>
+                        <div class="simulation-ball" data-simulation-ball></div>
+                    </div>
+                </div>
+
+                <aside class="simulation-notes reveal">
+                    <div class="panel-title">
+                        <div>
+                            <small>INDICACIONES</small>
+                            <strong>Cómo se juega</strong>
+                        </div>
+                    </div>
+
+                    <p data-simulation-description>El central abre al lateral, el medio se acerca para apoyar y el extremo recibe por fuera.</p>
+
+                    <div class="simulation-route">
+                        <small>SECUENCIA</small>
+                        <ol data-simulation-route></ol>
+                    </div>
+
+                    <div class="simulation-tip">
+                        <strong>Consejo del DT</strong>
+                        <p>La jugada sirve como guía. Los movimientos pueden cambiar según la presión del rival.</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="coaches section-anchor" data-section="dt">
+            <div class="section-heading reveal">
+                <div>
+                    <span>DIRECCIÓN TÉCNICA</span>
+                    <h2>Dirección técnica</h2>
+                </div>
+                <p>Dysta y Valdo están a cargo de mantener actualizados los planteles, las competencias y el calendario.</p>
+            </div>
+
+            <div class="coach-grid">
+                <article class="coach-card reveal">
+                    <div class="coach-photo">
+                        <img src="assets/dt/dysta.webp" alt="Dysta">
+                        <span>DT 01</span>
+                    </div>
+                    <div>
+                        <small>DIRECCIÓN TÉCNICA</small>
+                        <h3>Dysta</h3>
+                        <p>Responsable de organizar el plantel y registrar las jornadas del equipo.</p>
+                    </div>
+                </article>
+
+                <article class="coach-card reveal">
+                    <div class="coach-photo">
+                        <img src="assets/dt/valdo.webp" alt="Valdo">
+                        <span>DT 02</span>
+                    </div>
+                    <div>
+                        <small>DIRECCIÓN TÉCNICA</small>
+                        <h3>Valdo</h3>
+                        <p>Responsable de actualizar jugadores, fechas y competencias.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-brand">
+            <img src="assets/newcastle-crest.png" alt="">
+            <div>
+                <strong>NEWCASTLE TEAM</strong>
+                <small>HAXBALL</small>
+            </div>
+        </div>
+
+        <p>Información oficial del equipo.</p>
+        <span>2026</span>
+    </footer>
+
+    <div class="dt-modal" aria-hidden="true" data-dt-modal>
+        <div class="dt-backdrop" data-close-dt></div>
+
+        <div class="dt-card">
+            <button class="dt-close" type="button" data-close-dt>CERRAR</button>
+
+            <div class="dt-login" data-dt-login-view>
+                <span>MODO DT</span>
+                <h2>Editar equipo</h2>
+                <p>Selecciona el DT e introduce el código.</p>
+
+                <div class="dt-choice">
+                    <button class="active" type="button" data-dt-name="Dysta">
+                        <img src="assets/dt/dysta.webp" alt="">
+                        <span>Dysta</span>
+                    </button>
+                    <button type="button" data-dt-name="Valdo">
+                        <img src="assets/dt/valdo.webp" alt="">
+                        <span>Valdo</span>
+                    </button>
+                </div>
+
+                <label>
+                    <span>CÓDIGO</span>
+                    <input class="dt-code" type="password" autocomplete="off" placeholder="Código DT">
+                </label>
+
+                <button class="dt-login-submit" type="button">ENTRAR</button>
+                <p class="dt-login-message"></p>
+            </div>
+
+            <div class="dt-editor" data-dt-editor hidden>
+                <div class="dt-editor-head">
+                    <div>
+                        <span>SESIÓN ABIERTA</span>
+                        <h2 data-active-dt>Dysta</h2>
+                    </div>
+                    <button type="button" data-dt-logout>SALIR</button>
+                </div>
+
+                <div class="dt-tabs">
+                    <button class="active" type="button" data-dt-tab="players">PLANTELES</button>
+                    <button type="button" data-dt-tab="dates">FECHAS</button>
+                    <button type="button" data-dt-tab="teams">COMPETENCIAS</button>
+                    <button type="button" data-dt-tab="simulations">JUGADAS</button>
+                </div>
+
+                <div class="dt-panel active" data-dt-panel="players">
+                    <div class="editor-grid">
+                        <div class="editor-form">
+                            <label>
+                                <span>COMPETENCIA</span>
+                                <select class="dt-player-team"></select>
+                            </label>
+
+                            <label>
+                                <span>JUGADOR</span>
+                                <input class="dt-player-name" type="text" placeholder="Nombre">
+                            </label>
+
+                            <button class="dt-add-player" type="button">AÑADIR</button>
+                        </div>
+
+                        <div class="editor-list">
+                            <div class="editor-list-head">
+                                <small>PLANTEL ACTUAL</small>
+                                <strong data-editor-player-count>0 jugadores</strong>
+                            </div>
+                            <div data-editor-player-list></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dt-panel" data-dt-panel="dates">
+                    <div class="date-form">
+                        <label>
+                            <span>COMPETENCIA</span>
+                            <select class="dt-date-team"></select>
+                        </label>
+                        <label>
+                            <span>TÍTULO</span>
+                            <input class="dt-date-title" type="text" placeholder="Jornada 1">
+                        </label>
+                        <label>
+                            <span>FECHA</span>
+                            <input class="dt-date-value" type="date">
+                        </label>
+                        <label>
+                            <span>HORA</span>
+                            <input class="dt-date-time" type="time">
+                        </label>
+                        <label>
+                            <span>RIVAL O DETALLE</span>
+                            <input class="dt-date-detail" type="text" placeholder="Rival por confirmar">
+                        </label>
+                        <label>
+                            <span>ESTADO</span>
+                            <select class="dt-date-status">
+                                <option value="pending">Pendiente</option>
+                                <option value="confirmed">Confirmada</option>
+                                <option value="finished">Finalizada</option>
+                            </select>
+                        </label>
+                        <button class="dt-add-date" type="button">AÑADIR FECHA</button>
+                    </div>
+
+                    <div class="editor-list date-editor-list">
+                        <div class="editor-list-head">
+                            <small>FECHAS CARGADAS</small>
+                        </div>
+                        <div data-editor-date-list></div>
+                    </div>
+                </div>
+
+                <div class="dt-panel" data-dt-panel="teams">
+                    <div class="team-editor">
+                        <label>
+                            <span>NUEVA COMPETENCIA</span>
+                            <input class="dt-team-name" type="text" placeholder="Nombre">
+                        </label>
+                        <button class="dt-add-team" type="button">AÑADIR COMPETENCIA</button>
+                    </div>
+
+                    <div class="editor-list">
+                        <div class="editor-list-head">
+                            <small>COMPETENCIAS</small>
+                        </div>
+                        <div data-editor-team-list></div>
+                    </div>
+                </div>
+
+
+                <div class="dt-panel" data-dt-panel="simulations">
+                    <div class="simulation-editor-tools">
+                        <div class="simulation-editor-form">
+                            <label>
+                                <span>JUGADA</span>
+                                <select class="dt-simulation-select"></select>
+                            </label>
+
+                            <label>
+                                <span>COMPETENCIA</span>
+                                <select class="dt-simulation-team"></select>
+                            </label>
+
+                            <label>
+                                <span>TÍTULO</span>
+                                <input class="dt-simulation-title" type="text" maxlength="50" placeholder="Ejemplo: Salida por derecha">
+                            </label>
+
+                            <label>
+                                <span>INDICACIONES</span>
+                                <textarea class="dt-simulation-description" rows="4" maxlength="240" placeholder="Explica cómo se debe jugar"></textarea>
+                            </label>
+
+                            <label>
+                                <span>JUGADOR</span>
+                                <select class="dt-simulation-player"></select>
+                            </label>
+
+                            <div class="simulation-editor-actions">
+                                <button type="button" data-sim-add-player>AÑADIR JUGADOR</button>
+                                <button type="button" data-sim-pass-mode>MARCAR PASE</button>
+                                <button type="button" data-sim-remove-player>QUITAR JUGADOR</button>
+                                <button type="button" data-sim-remove-pass>BORRAR ÚLTIMO PASE</button>
+                            </div>
+
+                            <div class="simulation-editor-actions simulation-editor-actions-main">
+                                <button type="button" data-sim-new>NUEVA</button>
+                                <button type="button" data-sim-save>GUARDAR</button>
+                                <button type="button" data-sim-delete>ELIMINAR</button>
+                            </div>
+                        </div>
+
+                        <div class="simulation-editor-board">
+                            <div class="simulation-editor-status" data-sim-editor-status>Arrastra los jugadores para acomodarlos.</div>
+                            <div class="tactical-pitch tactical-pitch-editor" data-dt-simulation-pitch>
+                                <div class="tactical-border"></div>
+                                <div class="tactical-half"></div>
+                                <div class="tactical-circle"></div>
+                                <div class="tactical-box tactical-box-top"></div>
+                                <div class="tactical-box tactical-box-bottom"></div>
+                                <svg class="simulation-lines" viewBox="0 0 100 100" preserveAspectRatio="none" data-dt-simulation-lines></svg>
+                                <div class="simulation-markers" data-dt-simulation-markers></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="local-note">
+                    <strong>Importante</strong>
+                    <p>Los cambios se guardan en este navegador. Para que todos los visitantes vean las actualizaciones en tiempo real, la página tendría que conectarse a una base de datos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
