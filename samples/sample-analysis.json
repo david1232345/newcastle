@@ -1,0 +1,106 @@
+{
+  "duration": "12:13",
+  "room": "Vivet Hosting #2 — Miami, Florida",
+  "players": [
+    "SNOW PESO P",
+    "Huay Killah",
+    "Zapien dfc",
+    "Sebastián",
+    "se1029",
+    "TILIN",
+    "Saigo",
+    "Lanky",
+    "Wuerorey",
+    "Berte",
+    "lloris montana",
+    "Montiel",
+    "lux",
+    "del1712lucas",
+    "pixxe",
+    "yasez",
+    "Sumi",
+    "D1zks",
+    "Dysta",
+    "szobo(O)",
+    "Darwin Nuñez",
+    "michifu7",
+    "wl"
+  ],
+  "goals": [
+    {
+      "team": "Azul",
+      "scorer": "Montiel",
+      "assist": "lux"
+    },
+    {
+      "team": "Azul",
+      "scorer": "yasez",
+      "assist": "Montiel"
+    },
+    {
+      "team": "Azul",
+      "scorer": "yasez",
+      "assist": "lux"
+    }
+  ],
+  "focus": {
+    "requestedName": "D1zks",
+    "found": true,
+    "name": "D1zks",
+    "goals": 0,
+    "assists": 0,
+    "chatMessages": 11,
+    "messages": [
+      {
+        "author": "D1zks",
+        "id": "373",
+        "message": "q"
+      },
+      {
+        "author": "D1zks",
+        "id": "373",
+        "message": "q"
+      },
+      {
+        "author": "D1zks",
+        "id": "373",
+        "message": "q"
+      },
+      {
+        "author": "D1zks",
+        "id": "373",
+        "message": "?????"
+      },
+      {
+        "author": "D1zks",
+        "id": "373",
+        "message": "q"
+      },
+      {
+        "author": "D1zks",
+        "id": "373",
+        "message": "q"
+      },
+      {
+        "author": "D1zks",
+        "id": "373",
+        "message": "q"
+      },
+      {
+        "author": "D1zks",
+        "id": "373",
+        "message": "q"
+      },
+      {
+        "author": "D1zks",
+        "id": "373",
+        "message": "xd"
+      }
+    ]
+  },
+  "limitations": [
+    "El lector incluido extrae metadatos, participantes, goles, asistencias y mensajes visibles.",
+    "Todavía no calcula con precisión posesión, mapas de calor, pases completos ni posiciones cuadro por cuadro.",
+    "Las recomendaciones de IA se limitan a los datos extraídos y no deben inventar acciones no presentes en la repetición."
+  ]
+}
