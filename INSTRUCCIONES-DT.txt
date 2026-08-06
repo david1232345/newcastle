@@ -1,0 +1,60 @@
+NEWCASTLE TEAM — MODO DT
+========================
+
+CÓDIGO DE ACCESO
+----------------
+Dysta: NCT2026
+Valdo: NCT2026
+
+CÓMO ENTRAR
+-----------
+1. Abre la página.
+2. Presiona “Entrar como DT” o el botón “Editar” del plantel.
+3. Selecciona Dysta o Valdo.
+4. Escribe NCT2026.
+5. Presiona “Entrar”.
+
+FUNCIONES DEL DT
+----------------
+• Agregar o quitar jugadores.
+• Crear competencias.
+• Agregar fechas, horarios, rivales y estados.
+• Eliminar fechas o competencias.
+• Los cambios se reflejan en el calendario y el creador de alineaciones.
+
+JUGADORES INCLUIDOS
+-------------------
+Se cargaron 83 nombres de jugadores. Nekotina fue retirado de la plantilla.
+Los 13 que aparecían en la categoría “Fichados” conservan esa etiqueta.
+Los demás aparecen sin una etiqueta junto al nombre.
+
+DÓNDE ESTÁ EL CÓDIGO
+--------------------
+Abre app.js y busca:
+
+const dtCodes = Object.freeze({
+    Dysta: "NCT2026",
+    Valdo: "NCT2026"
+});
+
+Para cambiarlo, sustituye NCT2026 por el código que quieras.
+
+IMPORTANTE
+----------
+Los cambios del panel DT se guardan mediante localStorage. Solo quedan
+actualizados en el navegador y dispositivo donde se hicieron.
+
+El código está dentro del JavaScript público, por lo que es un acceso básico.
+Para que los DT actualicen la misma información para todos los visitantes,
+la página debe conectarse a una base de datos con inicio de sesión real.
+
+
+SIMULACIÓN DE JUGADAS
+---------------------
+1. Entra al modo DT con NCT2026.
+2. Abre la pestaña “Jugadas”.
+3. Elige una jugada o crea una nueva.
+4. Añade jugadores y arrástralos dentro de la cancha.
+5. Presiona “Marcar pase”, selecciona al jugador que pasa y después al que recibe.
+6. Escribe las indicaciones y guarda.
+7. La jugada aparecerá en el apartado público “Jugadas” y podrá reproducirse.
