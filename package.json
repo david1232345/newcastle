@@ -1,0 +1,26 @@
+{
+  "name": "newcastle-team-bot-ia",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Página de Newcastle Team con convocatorias de Discord, check y análisis básico de repeticiones HBR2 con Groq.",
+  "scripts": {
+    "dev": "vercel dev",
+    "register:discord": "node scripts/register-commands.mjs",
+    "test:replay": "node scripts/test-replay.mjs",
+    "check": "node --check app.js && node --check platform.js && node --check api/officials.js && node --check api/replays/analyze.js && node --check api/discord/interactions.js",
+    "local": "node server.mjs",
+    "test:supabase": "node scripts/test-supabase.mjs",
+    "skills:supabase": "npx skills add supabase/agent-skills"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "vercel": "latest"
+  },
+  "dependencies": {
+    "@supabase/ssr": "latest",
+    "@supabase/supabase-js": "latest"
+  }
+}
